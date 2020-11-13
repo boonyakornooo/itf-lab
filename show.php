@@ -5,13 +5,13 @@
 <body>
 <?php
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'itf-data.mysql.database.azure.com', 'it63070235@itf-data', 'NFMkwk23', 'ITFLab', 3306);
+mysqli_real_connect($conn, 'panwit.mysql.database.azure.com', 'panwit@panwit', '123456789', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
-?
+?>
 <table width="600" border="1">
   <tr>
     <th width="100"> <div align="center">Name</div></th>
