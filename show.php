@@ -11,10 +11,9 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
-?>
-<div class="container">
+?
 <table width="600" border="1">
-  <tr class="table-warning">
+  <tr>
     <th width="100"> <div align="center">Name</div></th>
     <th width="350"> <div align="center">Comment </div></th>
     <th width="150"> <div align="center">Link </div></th>
@@ -35,6 +34,5 @@ while($Result = mysqli_fetch_array($res))
 <?php
 mysqli_close($conn);
 ?>
-</div>
 </body>
 </html>
