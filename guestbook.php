@@ -9,13 +9,13 @@
 </head>
 <body>
 <?php
-$dbconfig = include('dbconfig.php');
-$conn = mysqli_connect($dbconfig['host'], $dbconfig['username'], $dbconfig['password'], $dbconfig['database']);
+
+$conn = mysqli_connect("Localhost", "it63070235_235", "NFMkwk23", "it63070235_itf");
 if (!$conn)
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM guestbook');
+$res = mysqli_query($conn, 'SELECT * FROM test');
 ?>
 <div class="container">
     <h1>Guestbook</h1>
@@ -23,8 +23,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <thead>
             <tr>
                 <th scope="col">Name</th>
-                <th scope="col">Comment</th>
-                <th scope="col">Link</th>
+                <th scope="col">A</th>
+                <th scope="col">B</th>
+                <th scope="col">C</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
@@ -35,8 +36,9 @@ while($row = mysqli_fetch_array($res))
         <tbody>
             <tr>
                 <td><?php echo $row['Name'];?></div></td>
-                <td><?php echo $row['Comment'];?></td>
-                <td><?php echo $row['Link'];?></td>
+                <td><?php echo $row['A'];?></td>
+                <td><?php echo $row['B'];?></td>
+                <td><?php echo $row['C'];?></td>
                 <td>
                     <div class="d-inline">
                         <form action="edit_form.php" method="post" class="d-inline">
