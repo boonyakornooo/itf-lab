@@ -9,15 +9,15 @@
 </head>
 <body>
 <?php
-$dbconfig = include('dbconfig.php');
-$conn = mysqli_connect($dbconfig['host'], $dbconfig['username'], $dbconfig['password'], $dbconfig['database']);
+
+$conn = mysqli_connect("Localhost", "it63070235_235", "NFMkwk23", "it63070235_itf");
 if (!$conn)
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 $ID = $_POST['ID'];
-$sql = "DELETE FROM guestbook WHERE ID='$ID'";
+$sql = "DELETE FROM test WHERE ID='$ID'";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
