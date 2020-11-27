@@ -9,17 +9,17 @@
 </head>
 <body>
 <?php
-$dbconfig = include('dbconfig.php');
-$conn = mysqli_connect($dbconfig['host'], $dbconfig['username'], $dbconfig['password'], $dbconfig['database']);
+
+$conn = mysqli_connect("Localhost", "it63070235_235", "NFMkwk23", "it63070235_itf");
 if (!$conn)
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-$name = $_POST['name'];
-$comment = $_POST['comment'];
-$link = $_POST['link'];
-$sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment', '$link')";
+$Name = $_POST['Name'];
+$A = $_POST['A'];
+$B = $_POST['B'];
+$sql = "INSERT INTO test (Name , A , B) VALUES ('$Name', '$A', '$B')";
 
 if (mysqli_query($conn, $sql)) {
     echo '<div class="container">
